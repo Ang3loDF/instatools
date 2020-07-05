@@ -196,8 +196,13 @@ class ReturnedFollowersRatio:
             # if the account is private
             followers_num_str = self.driver.find_element_by_xpath("html/body/div[1]/section/main/div/header/section/ul/li[2]/span/span").text.replace(".", "")
         
+        # convert the number of followers to int
+        try:
+            followers_num = int(followers_num_str)
+        except:
+            return False
+
         # check the number of follower is smaller than the max list length
-        followers_num = int(followers_num_str)
         if followers_num > self.max_lists_length:
             return False
         return True
@@ -215,8 +220,13 @@ class ReturnedFollowersRatio:
             # if the account is private
             following_num_str = self.driver.find_element_by_xpath("html/body/div[1]/section/main/div/header/section/ul/li[3]/span/span").text.replace(".", "")
         
+        # convert the number of following to int
+        try:
+            following_num = int(following_num_str)
+        except:
+            return False
+        
         # check the number of following is smaller than the max list length
-        following_num = int(following_num_str)
         if following_num > self.max_lists_length:
             return False
         return True
