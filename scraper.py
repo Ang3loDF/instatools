@@ -8,12 +8,6 @@ from tools.followers_count_of import followers_count_of
 from tools.following_count_of import following_count_of
 from tools.returned_followers import returned_followers
 
-""" 
-Scraper class:
-    - login and initialize driver
-    - all the mothods required (get from tools)
-
-"""
 
 class Scraper:
 
@@ -78,5 +72,7 @@ class Scraper:
         return following_count_of(self.driver, user)
     
 
+    # get the followers of a user that don't return the follow
+    # if $returned, get the list of the returned followers, else of the not-returned followers
     def returned_followers(self, user, returned):
         return returned_followers(self.driver, user, returned)
