@@ -1,16 +1,12 @@
-from returned_followers_ratio import ReturnedFollowersRatio
+from scraper import Scraper
 
-# initialization
-rfr = ReturnedFollowersRatio("your_username", "your_password", chrome_driver_path="C:\Program Files (x86)\chromedriver.exe")
-# get a user list
-users_list = rfr.find_list_from_followers("some_public_great_profile")
-# get the returned followers percentage
-ratios = rfr.search_list(users_list)
-# close the browser
-rfr.close()
+scraper = Scraper("your_instagram@email.co", "your_instagram_password", chrome_driver_path="C:\your_path\chromedriver.exe")
 
-print("")
+user = "some_username"
+not_returned = scraper.returned_followers(user, False)
 
-print("The final list is:")
-for user in ratios:
-    print(user["name"] + " --- " + str(user["return_ratio"]))
+users = ["some_username1", "some_username2", "some_username3"]
+return_ratios = scraper.returned_followers_ratio(users, max_lists_length=200)
+
+print(not_returned)
+print(return_ratios)
