@@ -1,7 +1,7 @@
 from time import sleep
 
-# get the followings of a user
-def followings_of(driver, user):
+# get the following of a user
+def following_of(driver, user):
     
     # get the user's profile page
     driver.get("https://www.instagram.com/" + user)

@@ -1,6 +1,6 @@
 from time import sleep
 from tools.followers_of import followers_of
-from tools.followings_of import followings_of
+from tools.following_of import following_of
 
 def returned_followers_ratio(driver, users, max_lists_length=400):
     return search_list(driver, users, max_lists_length)
@@ -44,7 +44,7 @@ def search_user(driver, user, max_lists_length):
     # get the followers and the following lists
     followers = followers_of(driver, user)
     sleep(1)
-    following = followings_of(driver, user)
+    following = following_of(driver, user)
 
     # if the account is private return 0
     if followers == None or following == None:
