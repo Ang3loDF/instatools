@@ -1,5 +1,11 @@
-# Instagram Returned Followers
-It is a python module that finds the percentage of the followers that have been reciprocated by a user or a list of users. It can be used to find the users with the highest probability of returning the follow. Finding them will help you or your bot to make your profile growing faster.
+# Instatools
+It is a python library that contains tools useful to automate tasks on Instagram.
+
+### Functions
+* **followers_of / following_of** - get a list of users from the followers/following of a specified user
+* **followers_count_of / following_count_of** - get the number of followers/following of a specified user
+* **returned_followers** - get a list with the reciprocated/not-reciprocated followers of a specified user
+* **returned_followers_ratio** - get the percentage of the followers that have been reciprocated by a user or a list of users. It can be used to find the users with the highest probability of returning the follow. Finding them will help you or your bot to make your profile growing faster.
 
 ## Getting Started
 
