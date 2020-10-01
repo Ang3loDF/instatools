@@ -6,6 +6,7 @@ from tools.following_of import following_of
 from tools.returned_followers_ratio import returned_followers_ratio
 from tools.followers_count_of import followers_count_of
 from tools.following_count_of import following_count_of
+from tools.returned_followers import returned_followers
 
 """ 
 Scraper class:
@@ -75,3 +76,7 @@ class Scraper:
     # get the number of following of a user
     def following_count_of(self, user):
         return following_count_of(self.driver, user)
+    
+
+    def returned_followers(self, user, returned):
+        return returned_followers(self.driver, user, returned)
